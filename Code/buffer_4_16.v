@@ -1,8 +1,8 @@
-module buffer_4_16(clk, rst, ld, row, col, Index, in, out);
+module buffer_4_16(clk, rst, ld, row, col, index, in, out);
 
     input clk, rst, ld;
     input[1:0] row, col;
-    input[3:0] Index;
+    input[3:0] index;
     input[31:0] in;
     output reg[127:0] out;
 
@@ -26,13 +26,13 @@ module buffer_4_16(clk, rst, ld, row, col, Index, in, out);
     end
 
     assign out = {
-            buffer[0][Index - 3], buffer[0][Index - 2],
-            buffer[0][Index - 1], buffer[0][Index],
-            buffer[1][Index - 3], buffer[1][Index - 2],
-            buffer[1][Index - 1], buffer[1][Index],
-            buffer[2][Index - 3], buffer[2][Index - 2],
-            buffer[2][Index - 1], buffer[2][Index],
-            buffer[3][Index - 3], buffer[3][Index - 2],
-            buffer[3][Index - 1], buffer[3][Index]
+            buffer[0][index - 3], buffer[0][index - 2],
+            buffer[0][index - 1], buffer[0][index],
+            buffer[1][index - 3], buffer[1][index - 2],
+            buffer[1][index - 1], buffer[1][index],
+            buffer[2][index - 3], buffer[2][index - 2],
+            buffer[2][index - 1], buffer[2][index],
+            buffer[3][index - 3], buffer[3][index - 2],
+            buffer[3][index - 1], buffer[3][index]
         };
 endmodule
