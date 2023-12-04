@@ -1,0 +1,17 @@
+.vsocde
+*.zip
+*.tmp
+*.dtmp
+~*
+*.bkp
+.gitmodules
+
+# Modelsim files
+*.wlf
+*.mti
+*.mpf
+transcript
+work
+*.dbg
+*.ini
+*.bak
